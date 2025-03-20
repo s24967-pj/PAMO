@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\daria\\.gradle\\daemon\\8.11.1\\com.example.bmi.app-mergeDebugResources-42:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\daria\\.gradle\\daemon\\8.11.1\\com.example.bmi.app-main-45:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\daria\\.gradle\\daemon\\8.11.1\\com.example.bmi.app-mergeDebugResources-42:\\layout\\fragment_second.xml",
+        "source": "C:\\Users\\daria\\.gradle\\daemon\\8.11.1\\com.example.bmi.app-main-45:\\layout\\fragment_second.xml"
+    },
+    {
+        "merged": "C:\\Users\\daria\\.gradle\\daemon\\8.11.1\\com.example.bmi.app-mergeDebugResources-42:\\layout\\fragment_first.xml",
+        "source": "C:\\Users\\daria\\.gradle\\daemon\\8.11.1\\com.example.bmi.app-main-45:\\layout\\fragment_first.xml"
+    },
+    {
+        "merged": "com.example.bmi.app-mergeDebugResources-42:/layout/activity_main.xml",
+        "source": "com.example.bmi.app-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\daria\\.gradle\\daemon\\8.11.1\\com.example.bmi.app-mergeDebugResources-42:\\layout\\content_main.xml",
+        "source": "C:\\Users\\daria\\.gradle\\daemon\\8.11.1\\com.example.bmi.app-main-45:\\layout\\content_main.xml"
+    }
+]
