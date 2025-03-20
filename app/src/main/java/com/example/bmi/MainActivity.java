@@ -1,14 +1,31 @@
 package com.example.bmi;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Apliakcja obliczająca BMI na podstawie dwóch danych wejściowych - masy ciała oraz wzrostu.
+ * ----------------------------
+ * Działanie:
+ *  Użytkownik wprowadza wakę oraz wzrost.
+ *  BMI jest obliczane z wzoru:
+ *      1) Wzrost podany w centymetrach jestsprowadzany do metrów -> wzrost/100
+ *      2) BMI = waga / wzrost^2
+ * ----------------------------
+ * Możliwe błędy:
+ *  Brak danych - komunikat „Wypełnij oba pola!”
+ *  Niepoprawny wzrost - komunikat „Podaj poprawny wzrost!”
+ * */
+
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * Metoda wywoływana przy uruchomieniu aplikacji.
+     * Odpowiada za inicjalizację i obsługuje kliknięcie przycisku.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Ocenia wynik masy ciała na podstawie wyklakulowanej wartości BMI.
+     * przyjmowane parametry: bmi - wartość BMI do interpretacji wyniku.
+     * zwraca: interpretacje wyniku jako String.
+     */
     private String CalculateTextBMI(double bmi){
 
         if (bmi>=30) {
