@@ -1,77 +1,60 @@
 package com.example.bmi;
 
 import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
-
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.View;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.bmi.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
-
 public class MainActivity extends AppCompatActivity {
-
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        EditText weightInput = findViewById(R.id.weightInput);
+        EditText heightInput = findViewById(R.id.heightInput);
+        Button calculateButton = findViewById(R.id.calculateButton);
+        TextView resultText = findViewById(R.id.resultText);
+        TextView interpretationText = findViewById(R.id.interpretationText);
 
-        setSupportActionBar(binding.toolbar);
+        calculateButton.setOnClickListener(view -> {
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+                String weightStr = weightInput.getText().toString();
+                String heightStr = heightInput.getText().toString();
 
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show();
-            }
+                if (!weightStr.isEmpty() && !heightStr.isEmpty()) {
+                    double weight = Double.parseDouble(weightStr);
+                    double height = Double.parseDouble(heightStr);
+
+                    if (height > 0) {
+                        double heightInCm = height / 100;
+                        double bmi = weight / (heightInCm * heightInCm);
+                        resultText.setText("Twoje BMI: " + String.format("%.2f", bmi));
+                        interpretationText.setText("Interpretacja wyniku: " + CalculateTextBMI(bmi));
+
+                    } else {
+                        resultText.setText("Podaj poprawny wzrost!");
+                    }
+                } else {
+                    resultText.setText("Wypełnij oba pola!");
+                }
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    private String CalculateTextBMI(double bmi){
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (bmi>=30) {
+            return "OTYŁOŚĆ";
+        } else if (bmi<30 && bmi>=25) {
+            return "NADWAGA";
+        } else if (bmi<25 && bmi>18){
+            return "OPTYMALNA MASA CIAŁA";
+        } else {
+            return "NIEDOWAGA";
         }
-
-        return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
 }
