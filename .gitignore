@@ -1,15 +1,53 @@
-*.iml
-.gradle
+# Gradle files
+.gradle/
+build/
+*/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local configuration
 /local.properties
-/.idea/caches
-/.idea/libraries
+/.idea/caches/
+/.idea/libraries/
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+/.idea/misc.xml
+
+# Keystore files (important for signing the app)
+*.keystore
+*.jks
+
+# Android Studio specific
+/captures/
+/.externalNativeBuild/
+.cxx/
+
+# Log files
+*.log
+
+# NDK
+/.ndk/
+
+# IntelliJ project-specific
+.idea/
+
+# Dependency directories
+/.gradle/
+/build/
+
+# JetBrains OS-specific
+*.iml
+
+# Misc
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+Thumbs.db
+
+# Crashlytics and Fabric
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+firebase/
+
+# Google Services (if using Firebase)
+google-services.json
