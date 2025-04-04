@@ -1,16 +1,25 @@
-<h1>KALKULATOR BMI</h1>
-<br></br>
-Apliakcja obliczająca BMI na podstawie dwóch danych wejściowych - masy ciała oraz wzrostu. 
-<br></br>
-<h3>Możliwe błędy:</h3>
-<li>Brak danych - komunikat „Wypełnij oba pola!”</li>
-<li>Niepoprawny wzrost - komunikat „Podaj poprawny wzrost!”</li>
-<br></br>
+<h1>Aplikacja do obliczania BMI oraz zapotrzebowania kalorycznego z przykładowymi przepisami</h1>
+Apliakcja posiada stronę startową na której użytkownik ma możliwość wyboru co chciałby obliczyć
+<li> BMI - na podstawie dwóch danych wejściowych - masy ciała oraz wzrostu. </li>
+<li> Zapotrzebowanie kaloryczne - na podstawie danych wejściowych: masy ciała, wzrostu, płci, aktywności fizycznej</li>
+Po obliczeniu zapotrzebowania kalorycznego użytkownik ma także opcje wyświetlenia przykładowych przepisów dobranych do wyliczonego zapotrzebowania.
 
-1) Obliczone BMI:
+<h3>Wygląd aplikacji</h3>
+
+1) Strona startowa:
 <br></br>
-![screenshot](images/PAMOCALCULATED.png)
+![screenshot](images/LAB2.1.png)
+
+2) Kalkulator BMI:
 <br></br>
-3) Error:
+![screenshot](images/LAB2.2.png)
+
+3) Kalkulator zapotrzebowania kalorycznego:
 <br></br>
-![screenshot](images/PAMOERROR.png)
+![screenshot](images/LAB2.3.png)
+
+4) Wyświetlanie przepisów:
+<br></br>
+![screenshot](images/LAB2.4.png)
+
+
