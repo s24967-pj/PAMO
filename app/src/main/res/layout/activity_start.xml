@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2E0E6"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="181dp"
+        android:layout_height="46dp"
+        android:rotation="-32"
+        android:scaleX="5"
+        android:scaleY="5"
+        android:src="@drawable/baseline_bakery_dining_24"
+        android:translationY="-120dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:text="Witaj w Kalkulatorze BMI!"
+        android:textColor="#ED1C63"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/BmiButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#CA6E8E"
+        android:text="Kalkulator BMI"
+        android:textColor="#950535"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/CaloriesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#CA6E8E"
+        android:text="Kalkulator kalorii"
+        android:textColor="#950535"
+        android:textSize="20sp"/>
+</LinearLayout>

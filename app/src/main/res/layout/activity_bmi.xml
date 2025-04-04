@@ -73,4 +73,13 @@
         android:text="Interpretacja wyniku: "
         android:textColor="#BF1B52"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/BackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#CA6E8E"
+        android:text="Strona główna"
+        android:textColor="#950535"
+        android:textSize="20sp" />
 </LinearLayout>

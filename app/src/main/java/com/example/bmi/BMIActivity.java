@@ -1,42 +1,38 @@
 package com.example.bmi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * Apliakcja obliczająca BMI na podstawie dwóch danych wejściowych - masy ciała oraz wzrostu.
- * ----------------------------
- * Działanie:
- *  Użytkownik wprowadza wakę oraz wzrost.
- *  BMI jest obliczane z wzoru:
- *      1) Wzrost podany w centymetrach jestsprowadzany do metrów -> wzrost/100
- *      2) BMI = waga / wzrost^2
- * ----------------------------
- * Możliwe błędy:
- *  Brak danych - komunikat „Wypełnij oba pola!”
- *  Niepoprawny wzrost - komunikat „Podaj poprawny wzrost!”
- * */
+/*** Klasa BMIActivity odpowiadająca za obliczanie wskaźnika BMI.
+ * Użytkownik podaje swoją wagę oraz wzrost na podstawie których obliczanej jest BMI.
+ */
 
-public class MainActivity extends AppCompatActivity {
 
-    /**
-     * Metoda wywoływana przy uruchomieniu aplikacji.
-     * Odpowiada za inicjalizację i obsługuje kliknięcie przycisku.
-     */
+public class BMIActivity extends AppCompatActivity {
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_bmi);
 
         EditText weightInput = findViewById(R.id.weightInput);
         EditText heightInput = findViewById(R.id.heightInput);
         Button calculateButton = findViewById(R.id.calculateButton);
         TextView resultText = findViewById(R.id.resultText);
         TextView interpretationText = findViewById(R.id.interpretationText);
+        Button backButton = findViewById(R.id.BackButton);
 
+        // Obsługa kliknięcia przycisku cofającego do strony głównej
+        backButton.setOnClickListener(v -> {
+            Intent intent = new Intent(BMIActivity.this, StartActivity.class);
+            startActivity(intent); //metoda do uruchamiania innej aktywności
+        });
+
+        // Obsługa przycisku do wyliczania BMI
         calculateButton.setOnClickListener(view -> {
 
                 String weightStr = weightInput.getText().toString();
@@ -59,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     resultText.setText("Wypełnij oba pola!");
                 }
         });
+
     }
 
     /**
