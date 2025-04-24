@@ -20,6 +20,8 @@ public class BMIActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmi);
 
+        BMICalculator bmiCalculator = new BMICalculator();
+
         EditText weightInput = findViewById(R.id.weightInput);
         EditText heightInput = findViewById(R.id.heightInput);
         Button calculateButton = findViewById(R.id.calculateButton);
@@ -45,14 +47,14 @@ public class BMIActivity extends AppCompatActivity {
 
                     if (height > 0) {
                         double heightInCm = height / 100;
-                        double bmi = weight / (heightInCm * heightInCm);
+                        double bmi = bmiCalculator.calculateBmi(weight, heightInCm);
 
                         resultText.setText(
                                 getString(R.string.bmi_result_with_value, String.format(Locale.US, "%.2f", bmi))
                         );
 
                         interpretationText.setText(
-                                getString(R.string.interpretation_with_value, CalculateTextBMI(bmi))
+                                getString(R.string.interpretation_with_value, bmiCalculator.CalculateTextBMI(bmi))
                         );
 
                     } else {
@@ -62,18 +64,5 @@ public class BMIActivity extends AppCompatActivity {
                     resultText.setText(getString(R.string.error_fill_fields));
                 }
         });
-
-    }
-
-    private String CalculateTextBMI(double bmi) {
-        if (bmi >= 30) {
-            return getString(R.string.bmi_obese);
-        } else if (bmi < 30 && bmi >= 25) {
-            return getString(R.string.bmi_overweight);
-        } else if (bmi < 25 && bmi > 18) {
-            return getString(R.string.bmi_optimal);
-        } else {
-            return getString(R.string.bmi_underweight);
-        }
     }
 }
