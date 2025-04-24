@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.ArrayAdapter;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
+import java.util.Locale;
 
 /*** Służy do obliczania zapotrzebowania kalorycznego na podstawie wprowadzonych przez użytkownika danych:
  * waga, wzrost, płeć, aktywność
@@ -69,7 +70,7 @@ public class CaloriesActivity extends AppCompatActivity {
                 }
 
                 double tdee = bmr * getActivityMultiplier(activityLevelStr);
-                resultText.setText("Twoje zapotrzebowanie kaloryczne: " + String.format("%.2f", tdee) + " kcal/dzień");
+                resultText.setText(String.format(Locale.getDefault(), "Twoje zapotrzebowanie kaloryczne: %.2f kcal/dzień", tdee));
 
                 // Obsługa przycisku „Pokaż przepis”
                 showRecipeButton.setOnClickListener(v1 -> {
@@ -108,7 +109,7 @@ public class CaloriesActivity extends AppCompatActivity {
                 });
 
             } else {
-                resultText.setText("Wypełnij wszystkie pola!");
+                resultText.setText(getString(R.string.fill_all_fields));
             }
         });
     }

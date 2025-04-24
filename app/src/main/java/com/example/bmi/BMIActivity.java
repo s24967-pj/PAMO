@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import java.util.Locale;
 
 /*** Klasa BMIActivity odpowiadająca za obliczanie wskaźnika BMI.
  * Użytkownik podaje swoją wagę oraz wzrost na podstawie których obliczanej jest BMI.
@@ -45,35 +46,34 @@ public class BMIActivity extends AppCompatActivity {
                     if (height > 0) {
                         double heightInCm = height / 100;
                         double bmi = weight / (heightInCm * heightInCm);
-                        resultText.setText("Twoje BMI: " + String.format("%.2f", bmi));
-                        interpretationText.setText("Interpretacja wyniku: " + CalculateTextBMI(bmi));
+
+                        resultText.setText(
+                                getString(R.string.bmi_result_with_value, String.format(Locale.US, "%.2f", bmi))
+                        );
+
+                        interpretationText.setText(
+                                getString(R.string.interpretation_with_value, CalculateTextBMI(bmi))
+                        );
 
                     } else {
-                        resultText.setText("Podaj poprawny wzrost!");
+                        resultText.setText(getString(R.string.error_invalid_height));
                     }
                 } else {
-                    resultText.setText("Wypełnij oba pola!");
+                    resultText.setText(getString(R.string.error_fill_fields));
                 }
         });
 
     }
 
-    /**
-     * Ocenia wynik masy ciała na podstawie wyklakulowanej wartości BMI.
-     * przyjmowane parametry: bmi - wartość BMI do interpretacji wyniku.
-     * zwraca: interpretacje wyniku jako String.
-     */
-    private String CalculateTextBMI(double bmi){
-
-        if (bmi>=30) {
-            return "OTYŁOŚĆ";
-        } else if (bmi<30 && bmi>=25) {
-            return "NADWAGA";
-        } else if (bmi<25 && bmi>18){
-            return "OPTYMALNA MASA CIAŁA";
+    private String CalculateTextBMI(double bmi) {
+        if (bmi >= 30) {
+            return getString(R.string.bmi_obese);
+        } else if (bmi < 30 && bmi >= 25) {
+            return getString(R.string.bmi_overweight);
+        } else if (bmi < 25 && bmi > 18) {
+            return getString(R.string.bmi_optimal);
         } else {
-            return "NIEDOWAGA";
+            return getString(R.string.bmi_underweight);
         }
     }
-
 }

@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BMI Calculator</string>
+    <string name="app_name">KALKULATOR BMI</string>
+    <string name="sec_app_name">Kalkulator kalorii</string>
+    <string name="hello">Witaj w Kalkulatorze BMI!</string>
     <string name="next">Dalej</string>
     <string name="previous">Wstecz</string>
-    <string name="lorem_ipsum">To jest przykładowy tekst Lorem Ipsum.</string>
-    <string name="action_settings">Ustawienia</string>
+    <string name="age">Wiek</string>
+    <string name="weight_hint">Waga (kg)</string>
+    <string name="height_hint">Wzrost (cm)</string>
+    <string name="calculate_button">Oblicz</string>
+    <string name="bmi_result">Twoje BMI: </string>
+    <string name="interpretation">Wynik: </string>
+    <string name="back_button">Strona główna</string>
+    <string name="recipe">Pokaż przepis</string>
+    <string name="calories">Twoje zapotrzebowanie kaloryczne:</string>
     <string name="first_fragment_label">Pierwszy fragment</string>
     <string name="second_fragment_label">Drugi fragment</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="action_settings">Ustawienia</string>
+
+    <string name="bmi_result_with_value">Twoje BMI: %1$s</string>
+    <string name="interpretation_with_value">Interpretacja wyniku: %1$s</string>
+    <string name="error_invalid_height">Podaj poprawny wzrost!</string>
+    <string name="error_fill_fields">Wypełnij oba pola!</string>
+
+    <string name="fill_all_fields">Wypełnij wszystkie pola!</string>
+
+    <string name="bmi_obese">OTYŁOŚĆ</string>
+    <string name="bmi_overweight">NADWAGA</string>
+    <string name="bmi_optimal">OPTYMALNA MASA CIAŁA</string>
+    <string name="bmi_underweight">NIEDOWAGA</string>
 
     <string-array name="gender_array">
         <item>Mężczyzna</item>
