@@ -31,6 +31,9 @@
     <string name="bmi_optimal">OPTYMALNA MASA CIAŁA</string>
     <string name="bmi_underweight">NIEDOWAGA</string>
 
+    <string name="shopping_list_title">Lista Zakupów</string>
+    <string name="exitbutton">Wróć</string>
+
     <string-array name="gender_array">
         <item>Mężczyzna</item>
         <item>Kobieta</item>

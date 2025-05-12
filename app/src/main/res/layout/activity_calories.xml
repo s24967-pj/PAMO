@@ -105,6 +105,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"/>
 
+    <Button
+        android:id="@+id/shoppingListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lista zakupów"
+        android:layout_marginTop="16dp" />
+
+
 
 
 </LinearLayout>

@@ -33,6 +33,8 @@
             android:exported="true"
             android:theme="@style/Theme.BMI"/>
 
+        <activity android:name=".ShoppingListActivity" />
+
     </application>
 
 </manifest>
