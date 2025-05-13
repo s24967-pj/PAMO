@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "BMI"
 include(":app")
- 
+include(":kotlinexercises")
