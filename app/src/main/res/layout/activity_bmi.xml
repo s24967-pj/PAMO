@@ -81,4 +81,5 @@
         android:text="@string/back_button"
         android:textColor="#950535"
         android:textSize="20sp" />
+
 </LinearLayout>

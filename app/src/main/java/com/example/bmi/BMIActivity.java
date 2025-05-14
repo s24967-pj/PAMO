@@ -35,6 +35,7 @@ public class BMIActivity extends AppCompatActivity {
             startActivity(intent); //metoda do uruchamiania innej aktywności
         });
 
+
         // Obsługa przycisku do wyliczania BMI
         calculateButton.setOnClickListener(view -> {
 

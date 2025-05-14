@@ -18,6 +18,12 @@ public class StartActivity extends AppCompatActivity {
 
         Button BmiButton = findViewById(R.id.BmiButton);
         Button CaloriesButton = findViewById(R.id.CaloriesButton);
+        Button chartButton = findViewById(R.id.openChartButton);
+
+        chartButton.setOnClickListener(v -> {
+            Intent intent = new Intent(StartActivity.this, BmiChartActivity.class);
+            startActivity(intent);
+        });
 
         BmiButton.setOnClickListener(v -> {
             Intent intent = new Intent(StartActivity.this, BMIActivity.class);

@@ -34,6 +34,8 @@
     <string name="shopping_list_title">Lista Zakupów</string>
     <string name="exitbutton">Wróć</string>
 
+    <string name="bmi_chart">Pokaż wykres BMI</string>
+
     <string-array name="gender_array">
         <item>Mężczyzna</item>
         <item>Kobieta</item>

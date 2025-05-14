@@ -35,6 +35,9 @@
 
         <activity android:name=".ShoppingListActivity" />
 
+        <activity android:name=".BmiChartActivity" />
+
+
     </application>
 
 </manifest>
