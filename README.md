@@ -1,10 +1,9 @@
-<h1>KALKULATOR BMI</h1>
+<h1>BMI WYKRES</h1>
 
-<p>Aplikacja obliczająca BMI na podstawie dwóch danych wejściowych - masy ciała oraz wzrostu.</p>
+![screenshot](images/LAB41.png)
 
-<h3>Możliwe błędy:</h3>
-<ul>
-    <li>Brak danych - komunikat „Wypełnij oba pola!”</li>
-    <li>Niepoprawny wzrost - komunikat „Podaj poprawny wzrost!”</li>
-</ul>
+<h1>LISTA DO PZREPISU</h1>
 
+![screenshot](images/LAB42.png)
+
+![screenshot](images/LAB43.png)
