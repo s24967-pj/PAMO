@@ -15,13 +15,11 @@
         android:layout_gravity="center_horizontal"
         android:paddingBottom="12dp" />
 
-    <ListView
-        android:id="@+id/listView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:dividerHeight="8dp"
-        android:choiceMode="multipleChoice" />
+        android:layout_weight="1"/>
 
     <Button
         android:id="@+id/exitButton"
